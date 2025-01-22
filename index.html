@@ -172,6 +172,8 @@
     </div>
     <!-- About End -->
 
+    <div class="" id="application"></div>
+
 
     <!-- Categories Start -->
     <div class="container-xxl py-5 category">
@@ -477,6 +479,11 @@
             .then(response => response.text())
             .then(data => {
                 document.getElementById('footer').innerHTML = data;
+            });
+        fetch('/components/Application.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('application').innerHTML = data;
             });
     </script>
 </body>
